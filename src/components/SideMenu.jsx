@@ -12,10 +12,12 @@ import { FaSortAlphaDown } from 'react-icons/fa';
 import { BiConfused } from 'react-icons/bi';
 import { BsStack } from 'react-icons/bs';
 import { MdOutlineElderlyWoman } from 'react-icons/md';
+import { PiCoffeeFill } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 function SideMenu() {
   const [activeCategory, setActiveCategory] = useState('Text');
   const categories = [
+    { name: 'Buy_me_a_Coffee', icon: <PiCoffeeFill /> },
     { name: 'Arrays', icon: <MdOutlineDataArray /> },
     { name: 'Strings', icon: <AiOutlineFieldString /> },
     { name: 'Stacks', icon: <BsStack /> },
@@ -29,8 +31,12 @@ function SideMenu() {
     { name: 'Make your grandma proud', icon: <MdOutlineElderlyWoman /> }
   ];
   const handleCategoryClick = category => {
-    setActiveCategory(category);
-    //logic for later
+    if (category === 'Buy_me_a_Coffee') {
+      window.open('https://www.buymeacoffee.com/phyhxmmjrj', '_blank');
+    } else {
+      setActiveCategory(category);
+      // logic for later
+    }
   };
   return (
     <div className="side-menu" style={{ height: '100vh' }}>
@@ -40,7 +46,11 @@ function SideMenu() {
       </div>
       <ul>
         {categories.map((category, index) =>
-          <li key={index}>
+          <li
+            key={index}
+            onClick={() => handleCategoryClick(category.name)}
+            className={category.name === 'Buy_me_a_Coffee' ? 'coffee-link' : ''}
+          >
             <div style={{ display: 'flex' }}>
               <p style={{ marginBottom: '1px', marginRight: '10px' }}>
                 {category.icon}

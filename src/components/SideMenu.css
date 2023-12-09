@@ -53,3 +53,7 @@ li:hover {
 .category-link:hover {
   color: #80b3ff;
 }
+
+.coffee-link {
+  border-bottom: 2px solid #008080;
+}
