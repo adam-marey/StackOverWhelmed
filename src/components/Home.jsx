@@ -1,12 +1,14 @@
 import React from 'react';
-import Navbar from './Navbar';
+import './Home.css';
 
-const Home = () => {
+const Home = ({ selectedCategory }) => {
   return (
     <div className="home">
-      <Navbar />
-      <h1>Home</h1>
-      <p>Home page content goes here...</p>
+      <h2 className="animate-text">
+        {selectedCategory
+          ? `Selected Category: ${selectedCategory}`
+          : 'To succeed in a technical interview, focus on practicing problems with common patterns, as mastering these patterns simplifies solving various challenges.'}
+      </h2>
     </div>
   );
 };

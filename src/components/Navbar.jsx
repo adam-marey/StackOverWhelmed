@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css'; // Import your CSS here
+import './Navbar.css';
 
 const Navbar = () => {
   const [timerRunning, setTimerRunning] = useState(false);
