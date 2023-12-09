@@ -6,6 +6,7 @@ import CategoryPage from './components/CategoryPage';
 import ArraysPage from './components/Topics/ArraysPage';
 import Strings from './components/Topics/Strings';
 import Buy_me_a_Coffee from './components/Topics/Buy_me_a_Coffee';
+import RightSlide from './components/rightSlide/RightSlide';
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -26,6 +27,7 @@ const App = () => {
           element={<Home selectedCategory={selectedCategory} />}
         />
       </Routes>
+      <RightSlide />
     </div>
   );
 };
