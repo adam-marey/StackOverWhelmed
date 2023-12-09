@@ -19,6 +19,7 @@ const Buy_me_a_Coffee = () => {
         totally fine too! I won&apos;t be missing out on any sips, but your
         thoughtful consideration warms my heart just the same.
       </p>
+
       <p className="coffee-paragraph">
         Cheers to you, whether you&apos;re sipping coffee or sharing kindness!
         🎉😄
