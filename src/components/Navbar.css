@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.navbar button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.navbar button:hover {
+  background-color: #0056b3;
+}
