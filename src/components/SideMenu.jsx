@@ -41,8 +41,10 @@ function SideMenu() {
   return (
     <div className="side-menu" style={{ height: '100vh' }}>
       <div className="logo">
-        <BsCodeSquare style={{ marginTop: '13px' }} />
-        <h2 className="title">StackOverWhelmed</h2>
+        <Link to="/" className="logo" style={{ textDecoration: 'none' }}>
+          <BsCodeSquare style={{ marginTop: '13px' }} />
+          <h2 className="title">StackOverWhelmed</h2>
+        </Link>
       </div>
       <ul>
         {categories.map((category, index) =>
